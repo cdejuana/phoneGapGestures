@@ -32,6 +32,10 @@ var app = {
             zona.className = 'doubletap';
         });
 
+        hammertime.on('tap', function(ev) {
+            zona.className = 'tap';
+        });
+
         hammertime.on('press', function(ev) {
             zona.className = 'press';
         });

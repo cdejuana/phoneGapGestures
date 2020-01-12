@@ -4,11 +4,11 @@ body {
 }
 
 body.claro {
-	background-color: #8de1bd;
+	-webkit-animation: claro 1.5s 1;	
 }
 
 body.oscuro {
-	background-color: #577a76;
+	-webkit-animation: oscuro 1.5s 1;	
 }
 
 button {
@@ -38,6 +38,10 @@ button {
 
 #zona-gestos.doubletap{
 	-webkit-animation: pulsacion 1.5s 1;
+}
+
+#zona-gestos.tap{
+	-webkit-animation: tap 0.1s 1;
 }
 
 #zona-gestos.press{
@@ -97,3 +101,28 @@ button {
 		-webkit-transform: rotate(360deg);
 	}
 }
+
+@-webkit-keyframes claro {
+	0%, 100% {
+		background-color: #8eadc5;
+	}
+	50% {
+		background-color: #8de1bd;
+	}
+}
+
+@-webkit-keyframes oscuro {
+	0%, 100% {
+		background-color: #8eadc5;
+	}
+	50% {
+		background-color: #577a76;
+	}
+}
+
+@-webkit-keyframes tap {
+	100% {
+		background-color: yellow;
+	}
+}
+
