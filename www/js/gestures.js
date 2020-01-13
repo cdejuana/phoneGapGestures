@@ -1,7 +1,7 @@
 var app = {
     inicio: function() {
     	this.iniciaBotones();
-    	this.iniciaFastClick();
+    	//this.iniciaFastClick();
     	this.iniciaHammer();        
     },
 
@@ -67,7 +67,7 @@ var app = {
 
     ponloOscuro: function(ev) {
         document.body.className = 'oscuro';
-    },
+    }
 };
 
 if ('addEventListener' in document) {
