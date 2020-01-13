@@ -5,9 +5,9 @@ var app = {
     	this.iniciaHammer();        
     },
 
-    iniciaFastClick: function(){
+    /*iniciaFastClick: function(){
     	FastClick.attach(document.body);
-    },
+    },*/
 
     iniciaBotones: function(){
     	var botonClaro = document.querySelector('#claro');
@@ -15,6 +15,10 @@ var app = {
 
         botonClaro.addEventListener('click', this.ponloClaro, false);
         botonOscuro.addEventListener('click', this.ponloOscuro, false);
+
+        document.body.addEventListener('webkitAnimationEnd', function(e) {
+	        document.body.className = '';
+	    });
     },
 
     iniciaHammer: function() {
@@ -56,11 +60,12 @@ var app = {
         });
     },
 
-    ponloClaro: function() {
+    ponloClaro: function(ev) {
         document.body.className = 'claro';
+        
     },
 
-    ponloOscuro: function() {
+    ponloOscuro: function(ev) {
         document.body.className = 'oscuro';
     },
 };
@@ -68,5 +73,5 @@ var app = {
 if ('addEventListener' in document) {
     document.addEventListener('DOMContentLoaded', function() {
         app.inicio();
-    }, false);
+    }, false);   
 }

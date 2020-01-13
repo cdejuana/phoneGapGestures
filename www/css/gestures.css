@@ -4,7 +4,7 @@ body {
 }
 
 body.claro {
-	-webkit-animation: claro 1.5s 1;	
+	-webkit-animation: claro 1.5s 1;
 }
 
 body.oscuro {
